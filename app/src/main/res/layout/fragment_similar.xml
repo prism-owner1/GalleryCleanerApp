@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- Threshold bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:background="?attr/colorSurface">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginBottom="4dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Similarity threshold" android:textSize="13sp"
+                android:textColor="@color/text_secondary" android:layout_weight="1"/>
+            <TextView android:id="@+id/tv_threshold" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="80% match"
+                android:textSize="13sp" android:textStyle="bold" android:textColor="@color/text_primary"/>
+        </LinearLayout>
+
+        <SeekBar android:id="@+id/seek_threshold"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:max="50" android:progress="30"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginTop="4dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="50% (loose)" android:textSize="11sp" android:textColor="@color/text_muted"/>
+            <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="100% (exact)" android:textSize="11sp" android:textColor="@color/text_muted"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Group count + select all -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:padding="12dp" android:gravity="center_vertical">
+        <TextView android:id="@+id/tv_group_count" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="—" android:textSize="13sp" android:textColor="@color/text_secondary"/>
+        <Button android:id="@+id/btn_select_all"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Auto-select dupes"
+            style="@style/Widget.Material3.Button.TextButton"/>
+    </LinearLayout>
+
+    <TextView android:id="@+id/tv_empty" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="No similar photos found"
+        android:gravity="center" android:padding="48dp"
+        android:textColor="@color/text_secondary" android:visibility="gone"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="80dp"/>
+
+    <!-- Delete bar -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_delete_selected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:text="Delete selected"
+        android:enabled="false"
+        app:backgroundTint="@color/danger"
+        xmlns:app="http://schemas.android.com/apk/res-auto"/>
+
+</LinearLayout>

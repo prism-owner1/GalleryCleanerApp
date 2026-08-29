@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/homeFragment"
+        android:title="Home"
+        android:icon="@drawable/ic_home"/>
+    <item android:id="@+id/similarFragment"
+        android:title="Similar"
+        android:icon="@drawable/ic_copy"/>
+    <item android:id="@+id/promoFragment"
+        android:title="Unwanted"
+        android:icon="@drawable/ic_trash"/>
+</menu>
