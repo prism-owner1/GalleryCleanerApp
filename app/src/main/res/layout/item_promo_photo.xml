@@ -5,7 +5,7 @@
     android:layout_margin="2dp">
 
     <ImageView
-        android:id="@+id/img_photo"
+        android:id="@+id/imgPhoto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
@@ -18,14 +18,14 @@
         android:background="@drawable/gradient_bottom"/>
 
     <CheckBox
-        android:id="@+id/check_select"
+        android:id="@+id/checkSelect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="top|start"
         android:layout_margin="4dp"/>
 
     <TextView
-        android:id="@+id/tv_reason"
+        android:id="@+id/tvReason"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
