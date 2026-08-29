@@ -253,12 +253,12 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <Button
-                android:id="@+id/btn_rescan"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Rescan"
-                style="@style/Widget.Material3.Button.OutlinedButton"/>
+<Button
+    android:id="@+id/btn_rescan_results"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Rescan"
+    style="@style/Widget.Material3.Button.OutlinedButton"/>
 
         </LinearLayout>
     </LinearLayout>
